@@ -3,24 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maafin Aku, Arif 🥺</title>
-  <link rel="stylesheet" href="style.css">
+  <title>For Arif 💌</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: linear-gradient(135deg, #ffd6e0, #c6e6ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    .typing {
+      border-right: 2px solid #ff69b4;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(30, end), blink .8s infinite;
+      font-size: 1.5rem;
+      color: #444;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background: #ff8fcf;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+      background: #ff69b4;
+    }
+    .hidden {
+      display: none;
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .content {
+      text-align: center;
+      max-width: 600px;
+      margin: 50px auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Arif, maafin aku yah 🥺💗</h1>
-    <p>Aku janji bakal lebih baik lagi buat kamu ✨</p>
-    
-    <!-- Tombol pilihan -->
-    <div class="choices">
-      <button id="yesBtn">Iyaaaa aku maafin 💗</button>
-      <button id="noBtn">Belum 😢</button>
-    </div>
-
-    <!-- Counter bacanya -->
-    <p class="counter">👀 Web ini udah dibuka <span id="visitCount">0</span> kali</p>
+  <!-- Intro -->
+  <div id="intro">
+    <div class="typing">hiii mas arif... klik aku yah 💌</div>
+    <button class="btn" onclick="showMessage()">💌 klik aku yah 💌</button>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Pesan Maaf -->
+  <div id="message" class="hidden">
+    <h1 class="fade-in">maafin aku yah mas... 🥺</h1>
+    <div class="content fade-in">
+      <p>
+        aku ngga seharusnya bikin kamu sedih atau bete sama aku.  
+        aku janji deh bakal lebih baik lagi, lebih jaga omongan aku kalo lagi marah… 🥺💖
+      </p>
+      <p>
+        kamu itu berharga banget buat aku, dan aku ga mau kehilangan kamu.  
+        semoga kamu mau maafin aku yaa mas arif 🥺💌
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("message").classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>
