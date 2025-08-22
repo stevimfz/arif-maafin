@@ -7,14 +7,14 @@
   <link rel="preload" as="audio" href="assets/maafkan aku">
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Google Analytics 4 (ganti G-XXXXXXXXXX) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "G-XXXXXXXXXX"); /* TODO: ganti ID kamu */
-  </script>
+  <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SJEB57ZZVL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SJEB57ZZVL');
+</script>
 </head>
 <body data-page="index">
   <!-- musik akan play setelah tombol diklik -->
@@ -48,7 +48,7 @@
       </figure>
 
       <figure class="card fade-in" style="animation-delay:1.2s">
-        <img src="img/hug.jpg">
+        <img src="img/opening.jpg">
         <figcaption>aku mau ketemu deh biar bisa peyuk kamu langsung 🥺💗</figcaption>
       </figure>
 
@@ -70,7 +70,7 @@
 
   <!-- Popup -->
   <div class="popup" id="popup">
-    <img src="assets/PELUKAN.png" alt="Pelukan">
+    <img src="img/boboan.jpg">
     <p id="popupText"></p>
     <button class="cute-btn ghost" onclick="closePopup()">bales chat aku yah kalo udah siap 🤍✨</button>
   </div>
@@ -78,3 +78,4 @@
   <script src="js/app.js" defer></script>
 </body>
 </html>
+
