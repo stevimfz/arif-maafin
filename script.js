@@ -1,11 +1,11 @@
 /* =========================
-   CONFIG — EDIT BAGIAN INI
+   CONFIG 
    ========================= */
 const CONFIG = {
-  GA_MEASUREMENT_ID: "G-XXXXXXXXXX", // ganti dengan GA4 ID kamu (optional di sini)
-  COUNT_NAMESPACE: "arif-apology-web", // 
+  GA_MEASUREMENT_ID: "G-SJEB57ZZVL",
+  COUNT_NAMESPACE: "arif-apology-web",
   COUNT_KEYS: { index: "index-views", yeay: "yeay-views", belum: "belum-views" },
-  LOG_ENDPOINT: "https://script.google.com/macros/s/PASTE_WEB_APP_URL/exec" // isi setelah deploy Apps Script
+  LOG_ENDPOINT: "https://script.google.com/macros/s/AKfycbyUdLo5rHW71CsiE3GWmDVPQqo7haJwRyWDStoNyWSvRT4CkpT1J59rP6rQGFKN7ATL/exec"
 };
 
 /* =========================
@@ -32,7 +32,7 @@ const CONFIG = {
 (function typeStartButton(){
   const btn = document.getElementById("startBtn");
   if(!btn) return;
-  const full = btn.dataset.text || "klik aku 💌";
+  const full = btn.dataset.text || "klik aku yah 💌";
   let i = 0;
   function tick(){
     btn.textContent = full.slice(0, i++);
@@ -50,7 +50,7 @@ async function updateViews(){
   const page = document.body.dataset.page || "index";
   const key  = CONFIG.COUNT_KEYS[page] || "index-views";
   try{
-    const url = https://api.countapi.xyz/hit/${encodeURIComponent(CONFIG.COUNT_NAMESPACE)}/${encodeURIComponent(key)};
+    const url = 'https://api.countapi.xyz/hit/arif-maafin/index-views';
     const res = await fetch(url);
     const data = await res.json();
     el.textContent = data?.value ?? "1";
@@ -90,7 +90,7 @@ startBtn?.addEventListener("click", ()=>{
 // Logging ke Google Sheets (Apps Script)
 // NB: Fire-and-forget (no-cors), cek hasil di Google Sheet kamu
 function logChoice(choice, page){
-  if(!CONFIG.LOG_ENDPOINT || CONFIG.LOG_ENDPOINT.includes("PASTE_WEB_APP_URL")) return; // belum di-set
+  if(!CONFIG.LOG_ENDPOINT || CONFIG.LOG_ENDPOINT.includes("https://script.google.com/macros/s/AKfycbyUdLo5rHW71CsiE3GWmDVPQqo7haJwRyWDStoNyWSvRT4CkpT1J59rP6rQGFKN7ATL/exec")) return; 
   const body = new URLSearchParams({
     choice, page,
     ua: navigator.userAgent,
