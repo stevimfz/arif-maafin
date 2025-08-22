@@ -7,12 +7,13 @@
   <link rel="preload" as="audio" href="assets/maaf.mp3">
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Google Analytics 4 -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJEB57ZZVL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'G-SJEB57ZZVL');
 </script>
 </head>
@@ -78,6 +79,7 @@
   <script src="js/app.js" defer></script>
 </body>
 </html>
+
 
 
 
