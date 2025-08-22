@@ -3,7 +3,7 @@
    ========================= */
 const CONFIG = {
   GA_MEASUREMENT_ID: "G-SJEB57ZZVL",
-  COUNT_NAMESPACE: "arif-apology-web",
+  COUNT_NAMESPACE: "arif-maafin",
   COUNT_KEYS: { index: "index-views", yeay: "yeay-views", belum: "belum-views" },
   LOG_ENDPOINT: "https://script.google.com/macros/s/AKfycbyUdLo5rHW71CsiE3GWmDVPQqo7haJwRyWDStoNyWSvRT4CkpT1J59rP6rQGFKN7ATL/exec"
 };
@@ -47,19 +47,27 @@ const CONFIG = {
 async function updateViews(){
   const el = document.getElementById("views");
   if(!el) return;
+
+  // halaman ini, default 'index'
   const page = document.body.dataset.page || "index";
   const key  = CONFIG.COUNT_KEYS[page] || "index-views";
+
   try{
-    const url = 'https://api.countapi.xyz/hit/arif-maafin/index-views';
+    // URL CountAPI otomatis pakai namespace + key
+    const url = https://api.countapi.xyz/hit/${encodeURIComponent(CONFIG.COUNT_NAMESPACE)}/${encodeURIComponent(key)};
+    
     const res = await fetch(url);
     const data = await res.json();
+
+    // tampilkan jumlah view di halaman
     el.textContent = data?.value ?? "1";
   }catch{
     el.textContent = "1";
   }
 }
-updateViews();
 
+// jalankan counter saat load
+updateViews();
 /* =========================
    MUSIK + INTERAKSI
    ========================= */
@@ -119,3 +127,4 @@ noBtn?.addEventListener("click", ()=>{
   logChoice("belum", "index");
   setTimeout(()=>{ window.location.href = "belum.html"; }, 1000);
 });
+
