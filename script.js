@@ -117,18 +117,19 @@ yesBtn?.addEventListener("click", ()=>{
   alert("Arif memilih: iyaaa aku maafin 💗");
   showPopup("yey, makasih sayang ✨");
   logChoice("iya", "index");
-  setTimeout(()=>{ window.location.href = "yeay.html"; }, 2500);
+  setTimeout(()=>{ window.location.href = "yeay.html"; }, 3000);
 });
 
 noBtn?.addEventListener("click", ()=>{
   alert("Arif memilih: belummm 😢");
   showPopup("huhuhu yaudah deh aku nunggu sampe kamu mau maafin aku yah 🥺");
   logChoice("belum", "index");
-  setTimeout(()=>{ window.location.href = "belum.html"; }, 4000);
+  setTimeout(()=>{ window.location.href = "belum.html"; }, 5000);
 });
 
 function closePopup(){ if(popup) popup.style.display = "none"; }
 window.closePopup = closePopup;
+
 
 
 
