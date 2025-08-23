@@ -87,7 +87,8 @@ window.closePopup = closePopup;
 startBtn?.addEventListener("click", ()=>{
   opening?.classList.add("hidden");
   maaf?.classList.remove("hidden");
-  music?.play().catch(()=>{});
+   music.currentTime = 0;
+   music?.play().catch(()=>{});
 });
 
 /* =========================
@@ -122,3 +123,4 @@ noBtn?.addEventListener("click", ()=>{
   logChoice("belum", "index");
   setTimeout(()=>{ window.location.href = "belum.html"; }, 1000);
 });
+
