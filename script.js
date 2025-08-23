@@ -72,7 +72,7 @@ const maaf      = document.getElementById("maaf");
 const startBtn  = document.getElementById("startBtn");
 const music     = document.getElementById("music");
 startBtn.addEventListener("click", () => {
-  music.currentTime = 10;
+  music.currentTime = 13;
   music.play();            
   startBtn.style.display = "none"; 
 });
@@ -134,6 +134,7 @@ noBtn?.addEventListener("click", ()=>{
 
 function closePopup(){ if(popup) popup.style.display = "none"; }
 window.closePopup = closePopup;
+
 
 
 
