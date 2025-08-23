@@ -127,4 +127,8 @@ noBtn?.addEventListener("click", ()=>{
   setTimeout(()=>{ window.location.href = "belum.html"; }, 4000);
 });
 
+function closePopup(){ if(popup) popup.style.display = "none"; }
+window.closePopup = closePopup;
+
+
 
