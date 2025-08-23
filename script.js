@@ -13,7 +13,7 @@ const CONFIG = {
    ========================= */
 (function makeStars(){
   const page = document.body.dataset.page || "index";
-  const STAR_COUNT = (page === "index") ? 36 : 48; // closing makin banyak ✨
+  const STAR_COUNT = (page === "index") ? 36 : 48; 
   for(let i=0;i<STAR_COUNT;i++){
     const s = document.createElement("div");
     s.className = "star";
@@ -42,32 +42,28 @@ const CONFIG = {
 })();
 
 /* =========================
-   PAGE VIEW COUNTER (CountAPI)
+   CountAPI View Counter
    ========================= */
-async function updateViews(){
-  const el = document.getElementById("views");
-  if(!el) return;
-
-  // halaman ini, default 'index'
-  const page = document.body.dataset.page || "index";
-  const key  = CONFIG.COUNT_KEYS[page] || "index-views";
-
-  try{
-    // URL CountAPI otomatis pakai namespace + key
-    const url = https://api.countapi.xyz/hit/${encodeURIComponent(CONFIG.COUNT_NAMESPACE)}/${encodeURIComponent(key)};
-    
-    const res = await fetch(url);
-    const data = await res.json();
-
-    // tampilkan jumlah view di halaman
-    el.textContent = data?.value ?? "1";
-  }catch{
-    el.textContent = "1";
-  }
+function incrementCounter(key, el) {
+  const url = `https://api.countapi.xyz/hit/arif-maafin/${key}`;
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      if (el) el.innerText = data.value;
+    })
+    .catch(() => {
+      if (el) el.innerText = "error";
+    });
 }
 
-// jalankan counter saat load
-updateViews();
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("views");
+  if (!el) return;
+  const page = document.body.dataset.page || "index";
+  const key  = CONFIG.COUNT_KEYS[page] || "index-views";
+  incrementCounter(key, el);
+});
+
 /* =========================
    MUSIK + INTERAKSI
    ========================= */
@@ -88,32 +84,31 @@ function showPopup(msg){
 function closePopup(){ if(popup) popup.style.display = "none"; }
 window.closePopup = closePopup;
 
-// Start → munculin halaman isi + play musik
 startBtn?.addEventListener("click", ()=>{
   opening?.classList.add("hidden");
   maaf?.classList.remove("hidden");
-  music?.play().catch(()=>{/* autoplay di iOS/Android perlu gesture — ini sudah gesture */});
+  music?.play().catch(()=>{});
 });
 
-// Logging ke Google Sheets (Apps Script)
-// NB: Fire-and-forget (no-cors), cek hasil di Google Sheet kamu
-function logChoice(choice, page){
-  if(!CONFIG.LOG_ENDPOINT || CONFIG.LOG_ENDPOINT.includes("https://script.google.com/macros/s/AKfycbyUdLo5rHW71CsiE3GWmDVPQqo7haJwRyWDStoNyWSvRT4CkpT1J59rP6rQGFKN7ATL/exec")) return; 
-  const body = new URLSearchParams({
-    choice, page,
-    ua: navigator.userAgent,
-    ref: document.referrer || "",
-    ts: new Date().toISOString()
-  }).toString();
-  fetch(CONFIG.LOG_ENDPOINT, {
-    method: "POST",
-    mode: "no-cors",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body
-  }).catch(()=>{});
+/* =========================
+   Logging ke Google Sheets
+   ========================= */
+function logChoice(choice, page){    
+  if(!CONFIG.LOG_ENDPOINT) return;     
+  const body = new URLSearchParams({    
+    choice, page,    
+    ua: navigator.userAgent,    
+    ref: document.referrer || "",    
+    ts: new Date().toISOString()    
+  }).toString();    
+  fetch(CONFIG.LOG_ENDPOINT, {    
+    method: "POST",    
+    mode: "no-cors",    
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },    
+    body    
+  }).catch(()=>{});    
 }
 
-// Klik jawaban
 yesBtn?.addEventListener("click", ()=>{
   alert("Arif memilih: iyaaa aku maafin 💗");
   showPopup("yey, makasih sayang ✨");
@@ -127,4 +122,3 @@ noBtn?.addEventListener("click", ()=>{
   logChoice("belum", "index");
   setTimeout(()=>{ window.location.href = "belum.html"; }, 1000);
 });
-
