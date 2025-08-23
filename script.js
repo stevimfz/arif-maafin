@@ -71,6 +71,11 @@ const opening   = document.getElementById("opening");
 const maaf      = document.getElementById("maaf");
 const startBtn  = document.getElementById("startBtn");
 const music     = document.getElementById("music");
+startBtn.addEventListener("click", () => {
+  music.currentTime = 10;
+  music.play();            
+  startBtn.style.display = "none"; 
+});
 const yesBtn    = document.getElementById("yesBtn");
 const noBtn     = document.getElementById("noBtn");
 const popup     = document.getElementById("popup");
@@ -129,6 +134,7 @@ noBtn?.addEventListener("click", ()=>{
 
 function closePopup(){ if(popup) popup.style.display = "none"; }
 window.closePopup = closePopup;
+
 
 
 
