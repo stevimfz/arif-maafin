@@ -50,6 +50,19 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 .card img{width:100%; height:auto; border-radius:16px}
 .card figcaption{margin-top:10px;color:#ff69b4;font-size:.98rem}
 
+/* ===== button pink soft ===== */
+.pink-box {
+  background-color: #ffb6c1; 
+  color: #fff;               
+  border-radius: 18px;       
+  padding: 12px 20px;        
+  max-width: 90%;            
+  margin: 16px auto;         
+  text-align: center;        
+  font-size: 1em;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.09);
+}
+
 /* ===== Closing section ===== */
 .closing{margin-top:10px;display:flex;flex-direction:column;align-items:center;gap:12px}
 .closing-title{font-weight:600;color:#444}
@@ -102,3 +115,4 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
