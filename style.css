@@ -60,7 +60,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 }
 
 /* Gambar */
-.gambar-maafin {
+.card fade-in {
   display: block;
   margin: 60px auto 0 auto; /* 60px jarak dari teks, auto biar di tengah */
   max-width: 90%;           /* responsif di HP */
@@ -152,6 +152,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
