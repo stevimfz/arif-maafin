@@ -128,13 +128,14 @@ yesBtn?.addEventListener("click", ()=>{
 
 noBtn?.addEventListener("click", ()=>{
   alert("Arif memilih: belummm 😢");
-  showPopup("huhuhu yaudah deh aku nunggu sampe kamu mau maafin aku yah 🥺");
+  showPopup("yaudah deh... aku sabar nungguin sampe kamu siap maafin aku 🥺");
   logChoice("belum", "index");
   setTimeout(()=>{ window.location.href = "belum.html"; }, 5000);
 });
 
 function closePopup(){ if(popup) popup.style.display = "none"; }
 window.closePopup = closePopup;
+
 
 
 
