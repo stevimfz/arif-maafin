@@ -50,21 +50,31 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
   }
 }
 
-/* Container teks */
+/* Container teks + konten */
 .maafin {
-  font-size: 13px;         /* teks kecil */
-  line-height: 1.2;        /* jarak rapet */
-  text-align: center;      /* teks rata tengah */
-  margin-top: 50px;        /* agak turun dari atas */
-  margin-bottom: 60px;     /* jarak ke bawah */
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: center;   /* teks rata tengah */
+  margin-top: 40px;
+  margin-bottom: 60px;  /* kasih jarak bawah biar ga nempel */
 }
 
-/* Gambar */
-.card fade-in {
+/* Biar figure (gambar + caption) di tengah */
+.maafin figure {
+  text-align: center;
+  margin: 50px auto;    /* jarak atas-bawah 50px, auto = tengah */
+}
+
+.maafin img {
   display: block;
-  margin: 60px auto 0 auto; /* 60px jarak dari teks, auto biar di tengah */
-  max-width: 90%;           /* responsif di HP */
+  margin: 0 auto;       /* gambar center */
+  max-width: 80%;       /* responsif */
   height: auto;
+}
+
+.maafin figcaption {
+  margin-top: 10px;     /* jarak antara gambar dan caption */
+  font-size: 12px;
 }
 
 /* ===== Gallery cards ===== */
@@ -152,6 +162,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
