@@ -53,7 +53,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 /* Container teks + konten */
 .maafin {
   font-size: 13px;
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: center;   /* teks rata tengah */
   margin-top: 40px;
   margin-bottom: 60px;  /* kasih jarak bawah biar ga nempel */
@@ -62,18 +62,18 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 /* Biar figure (gambar + caption) di tengah */
 .maafin figure {
   text-align: center;
-  margin: 50px auto;    /* jarak atas-bawah 50px, auto = tengah */
+  margin: 40px auto;    /* jarak atas-bawah 50px, auto = tengah */
 }
 
 .maafin img {
   display: block;
-  margin: 0 auto;       /* gambar center */
+  margin: 20 auto;       /* gambar center */
   max-width: 80%;       /* responsif */
   height: auto;
 }
 
 .maafin figcaption {
-  margin-top: 10px;     /* jarak antara gambar dan caption */
+  margin-top: 15px;     /* jarak antara gambar dan caption */
   font-size: 12px;
 }
 
@@ -162,6 +162,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
