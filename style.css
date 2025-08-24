@@ -34,8 +34,17 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 }
 
 /* ===== Fade-in ===== */
-.fade-in{opacity:0;animation:fadeIn 1.1s forwards}
-@keyframes fadeIn{to{opacity:1}}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.1s forwards;
+  margin: 4px 0; /* jarak antar baris */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
 /* ===== Gallery cards ===== */
 .gallery{
@@ -118,14 +127,10 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
   content: "👀 ";
 }
 
-      /* ===== Paragraph spacing (rapetin teks maaf) ===== */
-#maaf p {
-  margin: 4px 0;   
-  line-height: 1.6; 
-}
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
