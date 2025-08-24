@@ -35,7 +35,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 
 /* ===== Fade-in ===== */
 section.maafin {
-  margin: 0;
+  margin: 40px;
   font-size: 13px;
   line-height: 1.1;
 }
@@ -132,6 +132,7 @@ section.maafin {
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
