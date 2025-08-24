@@ -118,8 +118,15 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
   content: "👀 ";
 }
 
+      /* ===== Paragraph spacing (rapetin teks maaf) ===== */
+#maaf p {
+  margin: 4px 0;   
+  line-height: 1.6; 
+}
+
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
