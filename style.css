@@ -50,20 +50,20 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
   }
 }
 
-/* Container biar konten teks di tengah */
+/* Container teks */
 .maafin {
   font-size: 13px;         /* teks kecil */
   line-height: 1.2;        /* jarak rapet */
   text-align: center;      /* teks rata tengah */
-  margin-top: 40px;        /* jarak dari atas */
-  margin-bottom: 50px;     /* jarak ke bawah */
+  margin-top: 50px;        /* agak turun dari atas */
+  margin-bottom: 60px;     /* jarak ke bawah */
 }
 
-/* Gambar biar rapih di tengah */
+/* Gambar */
 .gambar-maafin {
   display: block;
-  margin: 40px auto 0 auto; /* tengah + ada jarak 40px dari teks */
-  max-width: 90%;           /* biar ga kepotong di layar hp */
+  margin: 60px auto 0 auto; /* 60px jarak dari teks, auto biar di tengah */
+  max-width: 90%;           /* responsif di HP */
   height: auto;
 }
 
@@ -152,6 +152,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
