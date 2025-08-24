@@ -35,16 +35,15 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 
 /* ===== Fade-in ===== */
 section.maafin {
-  opacity: 0;
-  animation: fadeIn 1.1s forwards;
-  margin: 1px 0;
-  line-height: 1.3
-  font-size: 14px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.1;
 }
 
 @keyframes fadeIn {
   to {
-    opacity: 1;
+    opacity: 0;
+  animation: fadeIn 1.1s forwards;
   }
 }
 
@@ -133,6 +132,7 @@ section.maafin {
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
