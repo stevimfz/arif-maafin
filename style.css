@@ -57,7 +57,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
   border-radius: 12px;       
   padding: 10px 20px;                 
   text-decoration: none;        
-  font-weight: 300;
+  font-height;
   font-family: 'Arial', sans-serif;
   box-shadow: 0 6px 14px rgba(0,0,0,0.09);
   display: inline-block;
@@ -120,6 +120,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
