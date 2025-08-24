@@ -62,12 +62,12 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 /* Biar figure (gambar + caption) di tengah */
 .maafin figure {
   text-align: center;
-  margin: 50px auto;    /* jarak atas-bawah 50px, auto = tengah */
+  margin: 25px auto;    /* jarak atas-bawah 50px, auto = tengah */
 }
 
 .maafin img {
   display: block;
-  margin: 3 auto;       /* gambar center */
+  margin:0 auto;       /* gambar center */
   max-width: 80%;       /* responsif */
   height: auto;
 }
@@ -162,6 +162,7 @@ h1{font-size:clamp(28px,4vw,42px);color:#ff69b4}
 
 /* ===== Utilities ===== */
 .hidden{display:none}
+
 
 
 
